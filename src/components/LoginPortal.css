@@ -1,0 +1,97 @@
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    padding: 20px;
+}
+
+.login-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.login-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-card-icon {
+    font-size: 2.5rem;
+    color: #8b5cf6;
+    margin-bottom: 1rem;
+}
+
+.login-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-title {
+        font-size: 2rem;
+    }
+
+    .login-cards-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .login-card {
+        min-height: 180px;
+    }
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Staggered animation for multiple cards */
+.login-card:nth-child(1) { animation-delay: 0.1s; }
+.login-card:nth-child(2) { animation-delay: 0.2s; }
+.login-card:nth-child(3) { animation-delay: 0.3s; }
+.login-card:nth-child(4) { animation-delay: 0.4s; } 
